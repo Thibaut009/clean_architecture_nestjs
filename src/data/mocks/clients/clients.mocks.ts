@@ -1,4 +1,5 @@
 import { Injectable } from '@nestjs/common';
+import { Client } from '../../../domain/models/client';
 
 @Injectable()
 export class ClientsMocks {

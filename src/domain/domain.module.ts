@@ -1,7 +1,10 @@
 import { Module } from '@nestjs/common';
-import { GetAllClientsUsecase } from './usecases/clients/get_all_clients.usecase';
+import { ClientsMocks } from '../data/mocks/clients/clients.mocks';
+import { DataModule } from '../data/data.module';
 
 @Module({
-  providers: [GetAllClientsUsecase]
+  imports: [DataModule],
+  providers: [ClientsMocks],
+  exports: [ClientsMocks]
 })
 export class DomainModule {}
